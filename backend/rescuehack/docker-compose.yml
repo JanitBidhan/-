@@ -1,0 +1,21 @@
+version: "3"
+services:
+  rescue-jdbc:
+    image: rescue-jdbc
+    ports:
+      - "8080:8080"
+    networks:
+      - rescue-mysql
+    depends_on:
+      - mysqldb
+
+  mysqldb:
+    image: mysql:8
+    networks:
+      - rescue-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=rescuedb
+
+networks:
+  rescue-mysql:
