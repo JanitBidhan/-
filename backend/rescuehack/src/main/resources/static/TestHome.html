@@ -1,233 +1,221 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Add Map</title>
 
     <style type="text/css">
-      /* Set the size of the div element that contains the map */
-      #map {
-        height: 700px;
-        /* The height is 400 pixels */
-        width: 80%;
-        /* The width is the width of the web page */
-      }
+        /* Set the size of the div element that contains the map */
+        #map {
+            height: 700px;
+            /* The height is 400 pixels */
+            width: 80%;
+            /* The width is the width of the web page */
+        }
     </style>
     <script>
-      // Initialize and add the map
-      var connection = new ActiveXObject("ADODB.Connection") ;
+        // Initialize and add the map
+        var connection = new ActiveXObject("ADODB.Connection");
 
-      var connectionstring="Database={rescuedb}; Data Source=rescuedb.mysql.database.azure.com; User Id=rescueAdmin@rescuedb; Password={rescuePass$$}";
-
-
-      connection.Open(connectionstring);
-      var rs = new ActiveXObject("ADODB.Recordset");
-
-      rs.Open("SELECT * FROM location", connection);
-      rs.MoveFirst
-      while(!rs.eof)
-      {
-          document.write(rs.fields(1));
-          rs.movenext;
-      }   
-
-      rs.close;
-      connection.close; 
-      
-
-      function initMap() {
-
-        const kiev = { lat: 50.344, lng: 30.523333 };
-        const Luhansk= { lat: 48.34, lng: 39.19 };
-        const Odesa = { lat: 50.15, lng: 28.40 };
-        const Horlivka = { lat: 48.20, lng: 38.03 };
-        const Donetsk = { lat: 48.01, lng: 25.48 };
-        const Kharkiv = { lat: 49.023, lng: 36.25 };
-        const Sevastopol = { lat: 44.607, lng: 33.52134 };
-        const Chernihiv = { lat: 51.5055, lng: 31.28 };
-        const Chernivtsi = { lat: 48.29, lng: 25.93 };
-        const kiev1 = { lat: 50.400259, lng: 30.517023 };
-        const kiev2 = { lat: 50.431730, lng: 30.517030 };
-        const kiev3 = { lat: 50.431600, lng: 30.537754 };
-        const kiev4 = { lat: 50.431759, lng: 30.537754 };
-        const kiev5 = { lat: 50.501759, lng: 30.607754 };
-        const kiev6 = { lat: 50.391759, lng: 30.507754 };
-        const kiev7 = { lat: 50.41800, lng: 30.477754 };
-        const kiev8 = { lat: 50.49123, lng: 30.587754 };
-
-        
-
-        
-        const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 8,
-          center: kiev,
-        });
-
-        const marker14 = new google.maps.Marker({
-          position: kiev4,
-          map: map,
-          icon: {                             
-            url: "http://maps.google.com/mapfiles/kml/pal3/icon46.png"                           
-          }
-        });
+        var connectionstring = "Database={rescuedb}; Data Source=rescuedb.mysql.database.azure.com; User Id=rescueAdmin@rescuedb; Password={rescuePass$$}";
 
 
-        const marker15 = new google.maps.Marker({
-          position: kiev5,
-          map: map,
-          icon: {                             
-            url: "http://maps.google.com/mapfiles/kml/pal3/icon31.png"                           
-          }
-        });
+        connection.Open(connectionstring);
+        var rs = new ActiveXObject("ADODB.Recordset");
+
+        rs.Open("SELECT * FROM location", connection);
+        rs.MoveFirst
+        while (!rs.eof) {
+            document.write(rs.fields(1));
+            rs.movenext;
+        }
+
+        rs.close;
+        connection.close;
 
 
-        const marker16 = new google.maps.Marker({
-          position: kiev6,
-          map: map,
-          icon: {                             
-            url: "http://maps.google.com/mapfiles/kml/pal3/icon31.png"                           
-          }
-        });
+        function initMap() {
+
+            const kiev = {lat: 50.344, lng: 30.523333};
+            const Luhansk = {lat: 48.34, lng: 39.19};
+            const Odesa = {lat: 50.15, lng: 28.40};
+            const Horlivka = {lat: 48.20, lng: 38.03};
+            const Donetsk = {lat: 48.01, lng: 25.48};
+            const Kharkiv = {lat: 49.023, lng: 36.25};
+            const Sevastopol = {lat: 44.607, lng: 33.52134};
+            const Chernihiv = {lat: 51.5055, lng: 31.28};
+            const Chernivtsi = {lat: 48.29, lng: 25.93};
+            const kiev1 = {lat: 50.400259, lng: 30.517023};
+            const kiev2 = {lat: 50.431730, lng: 30.517030};
+            const kiev3 = {lat: 50.431600, lng: 30.537754};
+            const kiev4 = {lat: 50.431759, lng: 30.537754};
+            const kiev5 = {lat: 50.501759, lng: 30.607754};
+            const kiev6 = {lat: 50.391759, lng: 30.507754};
+            const kiev7 = {lat: 50.41800, lng: 30.477754};
+            const kiev8 = {lat: 50.49123, lng: 30.587754};
 
 
-        const marker17 = new google.maps.Marker({
-          position: kiev7,
-          map: map,
-          icon: {                             
-            url: "http://maps.google.com/mapfiles/kml/pal2/icon1.png"                           
-          }
-        });
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 8,
+                center: kiev,
+            });
+
+            const marker14 = new google.maps.Marker({
+                position: kiev4,
+                map: map,
+                icon: {
+                    url: "http://maps.google.com/mapfiles/kml/pal3/icon46.png"
+                }
+            });
 
 
-        const marker18 = new google.maps.Marker({
-          position: kiev8,
-          map: map,
-          icon: {                             
-            url: "http://maps.google.com/mapfiles/kml/pal3/icon38.png"                           
-          }
-        });
+            const marker15 = new google.maps.Marker({
+                position: kiev5,
+                map: map,
+                icon: {
+                    url: "http://maps.google.com/mapfiles/kml/pal3/icon31.png"
+                }
+            });
 
 
-
-        const marker12 = new google.maps.Marker({
-          position: kiev2,
-          map: map,
-          icon: {                             
-            url: "http://maps.google.com/mapfiles/kml/pal3/icon59.png"                           
-          }
-        });
-
+            const marker16 = new google.maps.Marker({
+                position: kiev6,
+                map: map,
+                icon: {
+                    url: "http://maps.google.com/mapfiles/kml/pal3/icon31.png"
+                }
+            });
 
 
-        const marker11 = new google.maps.Marker({
-          position: kiev1,
-          map: map,
-          icon: {                             
-            url: "http://maps.google.com/mapfiles/kml/pal2/icon55.png"                                                      
-          }
-        });
+            const marker17 = new google.maps.Marker({
+                position: kiev7,
+                map: map,
+                icon: {
+                    url: "http://maps.google.com/mapfiles/kml/pal2/icon1.png"
+                }
+            });
 
 
+            const marker18 = new google.maps.Marker({
+                position: kiev8,
+                map: map,
+                icon: {
+                    url: "http://maps.google.com/mapfiles/kml/pal3/icon38.png"
+                }
+            });
 
 
-        const marker1 = new google.maps.Marker({
-          position: kiev,
-          map: map,
-          icon: {                             
-            url: "http://maps.google.com/mapfiles/kml/pal2/icon0.png"                           
-          }
-        });
-        
-        const marker2 = new google.maps.Marker({
-          position: Luhansk,
-          map: map,
-          icon: {                             
-            url: "http://maps.google.com/mapfiles/kml/pal2/icon1.png"                           
-            }
-        });
+            const marker12 = new google.maps.Marker({
+                position: kiev2,
+                map: map,
+                icon: {
+                    url: "http://maps.google.com/mapfiles/kml/pal3/icon59.png"
+                }
+            });
 
 
-        const marker3 = new google.maps.Marker({
-          position: Odesa,
-          map: map,
-          icon: {                             
-            url: "http://maps.google.com/mapfiles/kml/pal3/icon51.png"                           
-            }
-        });
-
-        const marker4 = new google.maps.Marker({
-          position: Horlivka,
-          map: map,
-          icon: {                             
-            url: "http://maps.google.com/mapfiles/kml/pal2/icon2.png"                           
-          }
-        });
-
-        const marker5 = new google.maps.Marker({
-          position: Donetsk,
-          map: map,
-          icon: {                             
-            url: "http://maps.google.com/mapfiles/kml/pal3/icon51.png"                           
-          }
-        });
-
-        const marker6 = new google.maps.Marker({
-          position: Kharkiv,
-          map: map,
-          icon: {                             
-            url: "http://maps.google.com/mapfiles/kml/pal3/icon51.png"                           
-          }
-        });
-
-        const marker7 = new google.maps.Marker({
-          position: Sevastopol,
-          map: map,
-          icon: {                             
-            url: "http://maps.google.com/mapfiles/kml/pal3/icon51.png"                           
-          }
-        });
-
-        const marker8 = new google.maps.Marker({
-          position: Chernihiv,
-          map: map,
-          icon: {                             
-            url: "http://maps.google.com/mapfiles/kml/pal3/icon51.png"                           
-          }
-        });
-
-        const marker9 = new google.maps.Marker({
-          position: Chernivtsi,
-          map: map,
-          icon: {                             
-            url: "http://maps.google.com/mapfiles/kml/pal3/icon51.png"                           
-          }
-        });
-
-        const marker10 = new google.maps.Marker({
-          position: Zhytomyr,
-          map: map,
-          icon: {                             
-            url: "http://maps.google.com/mapfiles/kml/pal3/icon51.png"                           
-          }
-        });
-    }
-
-      
+            const marker11 = new google.maps.Marker({
+                position: kiev1,
+                map: map,
+                icon: {
+                    url: "http://maps.google.com/mapfiles/kml/pal2/icon55.png"
+                }
+            });
 
 
+            const marker1 = new google.maps.Marker({
+                position: kiev,
+                map: map,
+                icon: {
+                    url: "http://maps.google.com/mapfiles/kml/pal2/icon0.png"
+                }
+            });
 
+            const marker2 = new google.maps.Marker({
+                position: Luhansk,
+                map: map,
+                icon: {
+                    url: "http://maps.google.com/mapfiles/kml/pal2/icon1.png"
+                }
+            });
+
+
+            const marker3 = new google.maps.Marker({
+                position: Odesa,
+                map: map,
+                icon: {
+                    url: "http://maps.google.com/mapfiles/kml/pal3/icon51.png"
+                }
+            });
+
+            const marker4 = new google.maps.Marker({
+                position: Horlivka,
+                map: map,
+                icon: {
+                    url: "http://maps.google.com/mapfiles/kml/pal2/icon2.png"
+                }
+            });
+
+            const marker5 = new google.maps.Marker({
+                position: Donetsk,
+                map: map,
+                icon: {
+                    url: "http://maps.google.com/mapfiles/kml/pal3/icon51.png"
+                }
+            });
+
+            const marker6 = new google.maps.Marker({
+                position: Kharkiv,
+                map: map,
+                icon: {
+                    url: "http://maps.google.com/mapfiles/kml/pal3/icon51.png"
+                }
+            });
+
+            const marker7 = new google.maps.Marker({
+                position: Sevastopol,
+                map: map,
+                icon: {
+                    url: "http://maps.google.com/mapfiles/kml/pal3/icon51.png"
+                }
+            });
+
+            const marker8 = new google.maps.Marker({
+                position: Chernihiv,
+                map: map,
+                icon: {
+                    url: "http://maps.google.com/mapfiles/kml/pal3/icon51.png"
+                }
+            });
+
+            const marker9 = new google.maps.Marker({
+                position: Chernivtsi,
+                map: map,
+                icon: {
+                    url: "http://maps.google.com/mapfiles/kml/pal3/icon51.png"
+                }
+            });
+
+            const marker10 = new google.maps.Marker({
+                position: Zhytomyr,
+                map: map,
+                icon: {
+                    url: "http://maps.google.com/mapfiles/kml/pal3/icon51.png"
+                }
+            });
+        }
 
 
     </script>
-  </head>
-  <body>
-    <h3>My Google Maps Demo</h3>
-    <!--The div element for the map -->
-    <div id="map"></div>
+</head>
+<body>
+<h3>My Google Maps Demo</h3>
+<!--The div element for the map -->
+<div id="map"></div>
 
-    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQPfcu7O0tyeoIRfKoiQHx4K40Cd1usLk&callback=initMap&libraries=&v=weekly"
-      async
-    ></script>
-  </body>
+<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQPfcu7O0tyeoIRfKoiQHx4K40Cd1usLk&callback=initMap&libraries=&v=weekly"
+        async
+></script>
+</body>
 </html>

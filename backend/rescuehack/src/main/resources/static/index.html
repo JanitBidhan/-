@@ -11,7 +11,17 @@
         body, h1, h2, h3, h4, h5, h6 {
             font-family: "Montserrat", sans-serif
         }
-
+        .w3-padding-32
+        {
+            padding-top: 100px!important;
+        }
+        #map {
+            height: 500px;
+            /* The height is 400 pixels */
+            width: 90%;
+            /* The width is the width of the web page */
+            border: solid black 2px;
+        }
         .w3-row-padding img {
             margin-bottom: 12px
         }
@@ -38,6 +48,10 @@
         body {
             color: white;
         }
+        .mobileHeader {
+            width: 25% !important;
+            border: solid white;
+        }
 
         /* Remove margins from "page content" on small screens */
         @media only screen and (max-width: 600px) {
@@ -53,7 +67,7 @@
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
     <!-- Avatar image in top left corner -->
     <img src="data:image/jpeg;base64,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">
-
+    <p>Kiev</p>
     <a class="w3-bar-item w3-button w3-padding-large w3-black isSafe" id="Safety1" onclick="getLocation()">
         <i class="fa w3-xxlarge"></i>
         <p id="TextSafe1">Safe</p>
@@ -74,6 +88,10 @@
         <i class="fa w3-xxlarge"></i>
         <p>Provide Information</p>
     </a>
+    <a class="w3-bar-item w3-button w3-padding-large w3-hover-black" href="#mapper">
+        <i class="fa w3-xxlarge"></i>
+        <p>Map</p>
+    </a>
     <a class="w3-bar-item w3-button w3-padding-large w3-hover-black" id="Evac1" onclick="needEvacuation()">
         <i class="fa w3-xxlarge"></i>
         <p id="TextEvacuate">Need Evacuation</p>
@@ -82,14 +100,16 @@
 
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-    <div class="w3-bar w3-yellow w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <div class="w3-bar w3-center w3-small" style="background:#4f4f20">
+        <p>Kiev</p>
         <a class="w3-bar-item w3-button isSafe" href="#" id="Safety2" onclick="getLocation()"
            style="width:25% !important">Safe</a>
-        <a class="w3-bar-item w3-button" href="#" style="width:25% !important">HOME</a>
-        <a class="w3-bar-item w3-button" href="#about" style="width:25% !important">Account</a>
-        <a class="w3-bar-item w3-button" href="#food" style="width:25% !important">Food</a>
-        <a class="w3-bar-item w3-button" href="#contact" style="width:25% !important">Provide Information</a>
-        <a class="w3-bar-item w3-button" href="#" id="Evac2" onclick="needEvacuation()" style="width:25% !important">Need
+        <a class="mobileHeader w3-bar-item w3-button" href="#" style="width:25% !important">HOME</a>
+        <a class="mobileHeader w3-bar-item w3-button" href="#about" style="width:25% !important;">Account</a>
+        <a class="mobileHeader w3-bar-item w3-button" href="#food" style="width:25% !important;">Food</a>
+        <a class="mobileHeader w3-bar-item w3-button" href="#contact" style="width:25% !important;">Provide Information</a>
+        <a class="mobileHeader w3-bar-item w3-button" href="#mapper" style="width:25% !important;">Map</a>
+        <a class="mobileHeader w3-bar-item w3-button" href="#" id="Evac2" onclick="needEvacuation()" style="width:25% !important;">Need
             Evacuation</a>
 
     </div>
@@ -99,13 +119,15 @@
 <div class="w3-padding-large" id="main">
     <!-- Header/Home -->
     <header class="w3-container w3-padding-32 w3-center w3-black" id="home" style="padding-top: 2em">
-        <h1 class="w3-jumbo">Urgent Information</h1>
+        <h1 class="w3-jumbo">Rescue Safe</h1>
+        <h4 >Urgent Information</h4 >
         <h4 id="info">Urgent Info.</h4>
         <h4 id="help" style="color:greenyellow"></h4>
     </header>
 
     <!-- About Section -->
     <div class="w3-content w3-justify  w3-padding-62" id="about">
+        <a href="#" >Edit</a>
         <h1 class="w3-padding-16 w3-text-light-grey">Details </h1>
         <h3 class="w3-text-white w3-section" id="name"> Kris Doe </h3>
         <div class="w3-margin-bottom">
@@ -113,9 +135,9 @@
                 <h3 class="w3-text-white">Address: </h3>
                 <p id="address">Address</p>
             </div>
-            <img alt="boy" class="w3-image"
-                 height="100"
-                 height="1108" src="https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=766&q=80" width="992" width="100">
+            <img alt="boy"
+                 width="100px"
+                 height="100px" src="https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=766&q=80" width="992" width="100">
             <div class="w3-half">
                 <h3 class="w3-text-white">State ID: </h3>
                 <p id="stateId">ID12345</p>
@@ -146,19 +168,20 @@
         <h2 class="w3-text-light-grey">Provide Information</h2>
         <hr class="w3-opacity" style="width:200px">
         <br>
+        <p id="Status"></p>
         <p>Let's get in touch. Send me a message:</p>
         <form id="contactForm">
             <input id="isFood" type="checkbox">
-            <label>Do you have Food</label><br>
+            <label>Do you have Food?</label><br>
             <input id="istank" type="checkbox">
             <label>Do you see Tanks?</label><br>
             <input id="isGunFire" type="checkbox">
-            <label>Do You Hear Gun Fire</label><br>
+            <label>Do You Hear Gun Fire?</label><br>
             <input id="isBombs" type="checkbox">
             <label>Do You Hear Bombs?</label><br>
             <input id="isEvacuation" type="checkbox">
             <label>Do you need Evacuation Help?</label><br>
-            <input id="isEvacuation" type="checkbox">
+            <input id="isBomb" type="checkbox">
             <label>Do You Hear Bombs?</label><br>
 
             <p><input class="w3-input w3-padding-16" name="Message" placeholder="Message" required type="text"></p>
@@ -169,6 +192,8 @@
             </p>
         </form>
         <!-- End Contact Section -->
+    </div>
+    <div class="w3-padding-64 w3-content " id="mapper" ><div id="map"></div>
     </div>
 
     <!-- Footer -->
@@ -181,7 +206,8 @@
 </body>
 <script>
     function formReset() {
-        alert("Slava Ukrainian!! \n Reseting the form");
+        alert("Slava Ukrainian!! \n  Data has been submitted");
+        document.getElementById("status").innerHTML="Data has been sent! Thank you!";
         document.getElementById("contactForm").reset();
     }
 
@@ -208,7 +234,7 @@
                 element.innerHTML = "NOT SAFE";
 
                 var element = document.getElementById("help");
-                element.innerHTML = "You had marked danger zone: Team with Cap. Patriot will be there in 1 hour 30 mins!";
+                element.innerHTML = "You have marked danger zone: Team with Cap. Patriot will be there in 1 hour 30 mins!";
             } else {
                 current_location.textContent = `Your browser does not support this feature`;
             }
@@ -224,7 +250,7 @@
         if (confirm("Want evacuation?")) {
             alert("System has been notified! Check Notification for update!")
             var element = document.getElementById("help");
-            element.innerHTML = "You had marked evacuation needed: Team with Cap. Patriot will be there in 1 hour 30 mins!";
+            element.innerHTML = "You have marked evacuation needed: Team with Cap. Patriot will be there in 1 hour 30 mins!";
         } else {
             alert("Stay indoors!");
         }
@@ -270,5 +296,208 @@
             }
         }
     }
+
+    // Initialize and add the map
+    var connection = new ActiveXObject("ADODB.Connection") ;
+
+    var connectionstring="Database={rescuedb}; Data Source=rescuedb.mysql.database.azure.com; User Id=rescueAdmin@rescuedb; Password={rescuePass$$}";
+
+
+    connection.Open(connectionstring);
+    var rs = new ActiveXObject("ADODB.Recordset");
+
+    rs.Open("SELECT * FROM location", connection);
+    rs.MoveFirst
+    while(!rs.eof)
+    {
+        document.write(rs.fields(1));
+        rs.movenext;
+    }
+
+    rs.close;
+    connection.close;
+
+
+    function initMap() {
+
+        const kiev = { lat: 50.344, lng: 30.523333 };
+        const Luhansk= { lat: 48.34, lng: 39.19 };
+        const Odesa = { lat: 50.15, lng: 28.40 };
+        const Horlivka = { lat: 48.20, lng: 38.03 };
+        const Donetsk = { lat: 48.01, lng: 25.48 };
+        const Kharkiv = { lat: 49.023, lng: 36.25 };
+        const Sevastopol = { lat: 44.607, lng: 33.52134 };
+        const Chernihiv = { lat: 51.5055, lng: 31.28 };
+        const Chernivtsi = { lat: 48.29, lng: 25.93 };
+        const kiev1 = { lat: 50.400259, lng: 30.517023 };
+        const kiev2 = { lat: 50.431730, lng: 30.517030 };
+        const kiev3 = { lat: 50.431600, lng: 30.537754 };
+        const kiev4 = { lat: 50.431759, lng: 30.537754 };
+        const kiev5 = { lat: 50.501759, lng: 30.607754 };
+        const kiev6 = { lat: 50.391759, lng: 30.507754 };
+        const kiev7 = { lat: 50.41800, lng: 30.477754 };
+        const kiev8 = { lat: 50.49123, lng: 30.587754 };
+
+
+
+
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 8,
+            center: kiev,
+        });
+
+        const marker14 = new google.maps.Marker({
+            position: kiev4,
+            map: map,
+            icon: {
+                url: "http://maps.google.com/mapfiles/kml/pal3/icon46.png"
+            }
+        });
+
+
+        const marker15 = new google.maps.Marker({
+            position: kiev5,
+            map: map,
+            icon: {
+                url: "http://maps.google.com/mapfiles/kml/pal3/icon31.png"
+            }
+        });
+
+
+        const marker16 = new google.maps.Marker({
+            position: kiev6,
+            map: map,
+            icon: {
+                url: "http://maps.google.com/mapfiles/kml/pal3/icon31.png"
+            }
+        });
+
+
+        const marker17 = new google.maps.Marker({
+            position: kiev7,
+            map: map,
+            icon: {
+                url: "http://maps.google.com/mapfiles/kml/pal2/icon1.png"
+            }
+        });
+
+
+        const marker18 = new google.maps.Marker({
+            position: kiev8,
+            map: map,
+            icon: {
+                url: "http://maps.google.com/mapfiles/kml/pal3/icon38.png"
+            }
+        });
+
+
+
+        const marker12 = new google.maps.Marker({
+            position: kiev2,
+            map: map,
+            icon: {
+                url: "http://maps.google.com/mapfiles/kml/pal3/icon59.png"
+            }
+        });
+
+
+
+        const marker11 = new google.maps.Marker({
+            position: kiev1,
+            map: map,
+            icon: {
+                url: "http://maps.google.com/mapfiles/kml/pal2/icon55.png"
+            }
+        });
+
+
+
+
+        const marker1 = new google.maps.Marker({
+            position: kiev,
+            map: map,
+            icon: {
+                url: "http://maps.google.com/mapfiles/kml/pal2/icon0.png"
+            }
+        });
+
+        const marker2 = new google.maps.Marker({
+            position: Luhansk,
+            map: map,
+            icon: {
+                url: "http://maps.google.com/mapfiles/kml/pal2/icon1.png"
+            }
+        });
+
+
+        const marker3 = new google.maps.Marker({
+            position: Odesa,
+            map: map,
+            icon: {
+                url: "http://maps.google.com/mapfiles/kml/pal3/icon51.png"
+            }
+        });
+
+        const marker4 = new google.maps.Marker({
+            position: Horlivka,
+            map: map,
+            icon: {
+                url: "http://maps.google.com/mapfiles/kml/pal2/icon2.png"
+            }
+        });
+
+        const marker5 = new google.maps.Marker({
+            position: Donetsk,
+            map: map,
+            icon: {
+                url: "http://maps.google.com/mapfiles/kml/pal3/icon51.png"
+            }
+        });
+
+        const marker6 = new google.maps.Marker({
+            position: Kharkiv,
+            map: map,
+            icon: {
+                url: "http://maps.google.com/mapfiles/kml/pal3/icon51.png"
+            }
+        });
+
+        const marker7 = new google.maps.Marker({
+            position: Sevastopol,
+            map: map,
+            icon: {
+                url: "http://maps.google.com/mapfiles/kml/pal3/icon51.png"
+            }
+        });
+
+        const marker8 = new google.maps.Marker({
+            position: Chernihiv,
+            map: map,
+            icon: {
+                url: "http://maps.google.com/mapfiles/kml/pal3/icon51.png"
+            }
+        });
+
+        const marker9 = new google.maps.Marker({
+            position: Chernivtsi,
+            map: map,
+            icon: {
+                url: "http://maps.google.com/mapfiles/kml/pal3/icon51.png"
+            }
+        });
+
+        const marker10 = new google.maps.Marker({
+            position: Zhytomyr,
+            map: map,
+            icon: {
+                url: "http://maps.google.com/mapfiles/kml/pal3/icon51.png"
+            }
+        });
+    }
 </script>
+<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQPfcu7O0tyeoIRfKoiQHx4K40Cd1usLk&callback=initMap&libraries=&v=weekly"
+        async
+></script>
 </html>
