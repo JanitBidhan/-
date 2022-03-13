@@ -1,8 +1,8 @@
 package edu.gmu.hackthon.dao;
 
+import edu.gmu.hackthon.model.common.Location;
 import edu.gmu.hackthon.model.person.FamilyMembership;
 import edu.gmu.hackthon.model.person.InfoProvided;
-import edu.gmu.hackthon.model.common.Location;
 import edu.gmu.hackthon.model.person.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -27,7 +27,7 @@ public class PersonDaoImpl extends JdbcDaoSupport implements PersonDao {
 
     @Override
     public Person getPerson(String id) {
-        String sql = "SELECT * FROM person where stateId=?";
+        String sql = "SELECT * FROM person where id=?";
 
         Person person = jdbcTemplate.queryForObject(sql, new Object[]{id}, (rs, rowNum) ->
                 new Person(

@@ -25,7 +25,7 @@ public class UrgentInfoImpl extends JdbcDaoSupport implements UrgentInfoDao {
     }
 
     @Override
-    public  List<UrgentInfo>  getAllInfo() {
+    public List<UrgentInfo> getAllInfo() {
         String sql = "SELECT * FROM urgentinfo";
 
 
@@ -35,9 +35,9 @@ public class UrgentInfoImpl extends JdbcDaoSupport implements UrgentInfoDao {
 
         for (Map row : rows) {
             UrgentInfo obj = new UrgentInfo(
-                    (int)  row.get("id"),
+                    (int) row.get("id"),
                     (String) row.get("data"),
-                    (int)  row.get("priority")
+                    (int) row.get("priority")
             );
 
             urgentData.add(obj);

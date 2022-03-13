@@ -16,16 +16,16 @@ public class Food {
         return location;
     }
 
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
     public int getLocationid() {
         return locationid;
     }
 
     public void setLocationid(int locationid) {
         this.locationid = locationid;
-    }
-
-    public void setLocation(Location location) {
-        this.location = location;
     }
 
     public String getAddress() {

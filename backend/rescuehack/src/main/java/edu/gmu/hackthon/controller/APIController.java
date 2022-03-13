@@ -2,7 +2,6 @@ package edu.gmu.hackthon.controller;
 
 import edu.gmu.hackthon.model.common.UrgentInfo;
 import edu.gmu.hackthon.model.person.Food;
-import edu.gmu.hackthon.model.person.InfoProvided;
 import edu.gmu.hackthon.model.person.Person;
 import edu.gmu.hackthon.service.Service;
 import org.springframework.beans.factory.annotation.Autowired;

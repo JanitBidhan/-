@@ -19,16 +19,16 @@ public class Person {
     private int need;
 
     public Person(String id, int stateId, String firstName, String lastName, String address, int location, int infoProvided, String family, int needs, String photoUrl) {
-         this.id=id;
-         this.stateId=stateId;
-         this.firstName=firstName;
-         this.lastName = lastName;
-         this.address=address;
-         this.locationId=location;
-         this.InfoId = infoProvided;
-         this.familyIds=family;
-         this.need=needs;
-         this.photoUrl=photoUrl;
+        this.id = id;
+        this.stateId = stateId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.locationId = location;
+        this.InfoId = infoProvided;
+        this.familyIds = family;
+        this.need = needs;
+        this.photoUrl = photoUrl;
     }
 
     public Person() {
@@ -41,10 +41,6 @@ public class Person {
 
     public void setLocationId(int locationId) {
         this.locationId = locationId;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
     }
 
     public String getFamilyIds() {
@@ -115,6 +111,9 @@ public class Person {
         return address;
     }
 
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
     public FamilyMembership getFamily() {
         return family;

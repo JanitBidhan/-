@@ -19,6 +19,7 @@ public class ServiceImpl implements Service {
     FoodDao foodDao;
     @Autowired
     UrgentInfoDao UrgentInfoDao;
+
     public Person getPerson(String id) {
         if (id != null && !id.equals(""))
             return personDao.getPerson(id);
@@ -26,10 +27,11 @@ public class ServiceImpl implements Service {
             return new Person();
         }
     }
-    public List<Food> getFood()
-    {
+
+    public List<Food> getFood() {
         return foodDao.gerNearbyFood();
     }
+
     @Override
     public boolean insertPerson(Person person) {
         return false;

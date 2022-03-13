@@ -8,7 +8,10 @@ import java.util.List;
 
 public interface Service {
     Person getPerson(String id);
+
     List<Food> getFood();
+
     boolean insertPerson(Person person);
+
     List<UrgentInfo> getUrgentInfo();
 }

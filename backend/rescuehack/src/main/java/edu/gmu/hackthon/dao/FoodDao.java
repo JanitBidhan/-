@@ -6,6 +6,8 @@ import java.util.List;
 
 public interface FoodDao {
     List<Food> gerNearbyFood();
+
     boolean updateFood(Food food);
+
     boolean createFood(Food food);
 }

@@ -9,9 +9,9 @@ public class UrgentInfo {
     }
 
     public UrgentInfo(int id, String data, int priority) {
-        this.id=id;
-        this.data=data;
-        this.priority=priority;
+        this.id = id;
+        this.data = data;
+        this.priority = priority;
     }
 
     public int getId() {

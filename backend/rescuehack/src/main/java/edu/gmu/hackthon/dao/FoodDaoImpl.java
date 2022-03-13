@@ -1,7 +1,7 @@
 package edu.gmu.hackthon.dao;
 
-import edu.gmu.hackthon.model.person.Food;
 import edu.gmu.hackthon.model.common.Location;
+import edu.gmu.hackthon.model.person.Food;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 @Repository
-public class FoodDaoImpl extends JdbcDaoSupport implements FoodDao{
+public class FoodDaoImpl extends JdbcDaoSupport implements FoodDao {
     @Autowired
     private DataSource dataSource;
     @Autowired
@@ -24,6 +24,7 @@ public class FoodDaoImpl extends JdbcDaoSupport implements FoodDao{
     private void initialize() {
         setDataSource(dataSource);
     }
+
     @Override
     public List<Food> gerNearbyFood() {
         String sql = "SELECT * FROM food";
@@ -34,7 +35,7 @@ public class FoodDaoImpl extends JdbcDaoSupport implements FoodDao{
         for (Map row : rows) {
             Food obj = new Food();
             obj.setId(((int) row.get("id")));
-            boolean available=(int) row.get("available")>0?true:false;
+            boolean available = (int) row.get("available") > 0 ? true : false;
             obj.setAvailable(available);
             obj.setAddress(((String) row.get("address")));
             obj.setLocationid((int) row.get("location"));
