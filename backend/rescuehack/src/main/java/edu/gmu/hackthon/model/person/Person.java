@@ -1,37 +1,74 @@
 package edu.gmu.hackthon.model.person;
 
+import edu.gmu.hackthon.model.common.Location;
+
 public class Person {
 
     private String id;
     private String firstName;
     private String lastName;
     private Location location;
-    private StateId stateId;
-    private Address address;
+    private int stateId;
+    private String address;
+    private String familyIds;
     private FamilyMembership family;
+    private int InfoId;
+    private int locationId;
     private InfoProvided infoProvided;
     private String photoUrl;
+    private int need;
 
-    public Person(String id, String firstName, String lastName, Location location, StateId stateId, Address address, FamilyMembership family, InfoProvided infoProvided, String photoUrl) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.location = location;
-        this.stateId = stateId;
-        this.address = address;
-        this.family = family;
-        this.infoProvided = infoProvided;
-        this.photoUrl = photoUrl;
-    }
-
-    public Person(String id, String firstName, String lastName) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public Person(String id, int stateId, String firstName, String lastName, String address, int location, int infoProvided, String family, int needs, String photoUrl) {
+         this.id=id;
+         this.stateId=stateId;
+         this.firstName=firstName;
+         this.lastName = lastName;
+         this.address=address;
+         this.locationId=location;
+         this.InfoId = infoProvided;
+         this.familyIds=family;
+         this.need=needs;
+         this.photoUrl=photoUrl;
     }
 
     public Person() {
 
+    }
+
+    public int getLocationId() {
+        return locationId;
+    }
+
+    public void setLocationId(int locationId) {
+        this.locationId = locationId;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getFamilyIds() {
+        return familyIds;
+    }
+
+    public void setFamilyIds(String familyIds) {
+        this.familyIds = familyIds;
+    }
+
+    public int getInfoId() {
+        return InfoId;
+    }
+
+    public void setInfoId(int infoId) {
+        InfoId = infoId;
+    }
+
+    public int getNeed() {
+        return need;
+    }
+
+    public void setNeed(int need) {
+        this.need = need;
     }
 
     public String getId() {
@@ -66,21 +103,18 @@ public class Person {
         this.location = location;
     }
 
-    public StateId getStateId() {
+    public int getStateId() {
         return stateId;
     }
 
-    public void setStateId(StateId stateId) {
+    public void setStateId(int stateId) {
         this.stateId = stateId;
     }
 
-    public Address getAddress() {
+    public String getAddress() {
         return address;
     }
 
-    public void setAddress(Address address) {
-        this.address = address;
-    }
 
     public FamilyMembership getFamily() {
         return family;

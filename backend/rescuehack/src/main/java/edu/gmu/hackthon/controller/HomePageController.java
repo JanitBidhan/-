@@ -15,4 +15,11 @@ public class HomePageController {
         return modelAndView;
     }
 
+    @RequestMapping("/admin")
+    public ModelAndView adminPage() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("admin");
+        return modelAndView;
+    }
+
 }
