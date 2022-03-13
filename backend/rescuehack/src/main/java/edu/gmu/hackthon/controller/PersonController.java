@@ -11,13 +11,13 @@ public class PersonController {
     @Autowired
     PersonService personService;
 
-    @RequestMapping(value = "/person", method = RequestMethod.GET)
+    @RequestMapping(value = "/person/{id}", method = RequestMethod.GET)
     public Person getPerson(@PathVariable String id) {
         return personService.getPerson(id);
     }
 
     @RequestMapping(value = "/insertperson", method = RequestMethod.POST)
-    public void insertEmployee(@RequestBody Person person) {
+    public void addPerson(@RequestBody Person person) {
         personService.insertPerson(person);
     }
 

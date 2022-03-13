@@ -6,7 +6,7 @@ import edu.gmu.hackthon.model.person.Person;
 public interface PersonDao {
     Person getPerson(String id);
 
-    boolean insertPerson(Person employee);
+    boolean insertPerson(Person person);
 
     boolean insertInformations(InfoProvided data);
 }

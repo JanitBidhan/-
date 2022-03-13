@@ -34,7 +34,7 @@ public class PersonDaoImpl extends JdbcDaoSupport implements PersonDao {
     }
 
     @Override
-    public boolean insertPerson(Person employee) {
+    public boolean insertPerson(Person person) {
         return false;
     }
 
