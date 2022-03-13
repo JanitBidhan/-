@@ -181,8 +181,6 @@
             <label>Do You Hear Bombs?</label><br>
             <input id="isEvacuation" type="checkbox">
             <label>Do you need Evacuation Help?</label><br>
-            <input id="isBomb" type="checkbox">
-            <label>Do You Hear Bombs?</label><br>
 
             <p><input class="w3-input w3-padding-16" name="Message" placeholder="Message" required type="text"></p>
             <p>
@@ -208,7 +206,7 @@
 <script>
     function formReset() {
         alert("Slava Ukrainian!! \n  Data has been submitted");
-        document.getElementById("status").innerHTML="Data has been sent! Thank you!";
+        document.getElementById("Status").innerHTML="Data has been sent! Thank you!";
         document.getElementById("contactForm").reset();
     }
 
@@ -219,7 +217,7 @@
         current_location.textContent = `Longitute = ${longitude} \n latitude = ${latitude}`;
     }
     const error = (error) => {
-        alert("Couldn't access your location.");
+       alert("Couldn't access your location.");
     }
     const getLocation = () => {
         if (confirm("Dangerous location!")) {
